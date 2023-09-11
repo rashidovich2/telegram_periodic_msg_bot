@@ -385,7 +385,7 @@ class PeriodicMsgScheduler:
 
     # Get total job count
     def __GetTotalJobCount(self) -> int:
-        return sum([len(jobs) for (_, jobs) in self.jobs.items()])
+        return sum(len(jobs) for (_, jobs) in self.jobs.items())
 
     # Build cron string
     @staticmethod

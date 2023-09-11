@@ -40,13 +40,13 @@ class ChatMembersList(WrappedList):
     def GetByUserId(self,
                     user_id: int) -> Optional[pyrogram.types.ChatMember]:
         res = list(filter(lambda member: user_id == member.user.id, self.list_elements))
-        return None if len(res) == 0 else res[0]
+        return None if not res else res[0]
 
     # Get by username
     def GetByUsername(self,
                       username: str) -> Optional[pyrogram.types.ChatMember]:
         res = list(filter(lambda member: username == member.user.username, self.list_elements))
-        return None if len(res) == 0 else res[0]
+        return None if not res else res[0]
 
     # Get if ID is present
     def IsUserIdPresent(self,

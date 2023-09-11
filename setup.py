@@ -42,7 +42,7 @@ setuptools.setup(
     long_description=load_long_description("README.md"),
     long_description_content_type="text/markdown",
     url="https://github.com/ebellocchia/telegram_periodic_msg_bot",
-    download_url="https://github.com/ebellocchia/telegram_periodic_msg_bot/archive/v%s.tar.gz" % version,
+    download_url=f"https://github.com/ebellocchia/telegram_periodic_msg_bot/archive/v{version}.tar.gz",
     license="MIT",
     install_requires=load_requirements("requirements.txt"),
     packages=setuptools.find_packages(exclude=[]),

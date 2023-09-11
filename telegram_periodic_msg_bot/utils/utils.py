@@ -28,9 +28,9 @@ class Utils:
     @staticmethod
     def StrToBool(s: str) -> bool:
         s = s.lower()
-        if s in ["true", "on", "yes", "y"]:
+        if s in {"true", "on", "yes", "y"}:
             res = True
-        elif s in ["false", "off", "no", "n"]:
+        elif s in {"false", "off", "no", "n"}:
             res = False
         else:
             raise ValueError("Invalid string")
