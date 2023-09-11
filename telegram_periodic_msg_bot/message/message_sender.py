@@ -83,7 +83,7 @@ class MessageSender:
                        msg: str) -> List[str]:
         msg_parts = []
 
-        while len(msg) > 0:
+        while msg != "":
             # If length is less than maximum, the operation is completed
             if len(msg) <= MessageSenderConst.MSG_MAX_LEN:
                 msg_parts.append(msg)
